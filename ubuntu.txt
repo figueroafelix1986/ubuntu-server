@@ -1,0 +1,29 @@
+https://github.com/figueroafelix1986/ubuntu-server.git
+
+Actualizar SO ubuntu
+-sudi apt-get update
+Gestio de escritorio en modo grafico (opcional)
+-sudo apt install slin
+Desktop
+sudo apt install ubuntu-desktop
+EJECUTAR TERMINAL
+-Ctrl+Alt+T
+Contectar como super USUARIO
+
+
+Instalar nextcloud 
+
+sudo apt install apache2
+
+sudo systemctl status apache2
+
+sudo systemctl enable apache2
+
+sudo systemctl restart apache2
+
+buscar 
+sudo find / -name config.php
+
+sudo nano /var/snap/nextcloud/39212/nextcloud/config/config.php
+
+
