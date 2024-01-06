@@ -1,7 +1,7 @@
 https://github.com/figueroafelix1986/ubuntu-server.git
 
-Actualizar SO ubuntu
--sudi apt-get update
+--Actualizar SO ubuntu
+-sudo apt-get update
 Gestio de escritorio en modo grafico (opcional)
 -sudo apt install slin
 Desktop
@@ -11,7 +11,8 @@ EJECUTAR TERMINAL
 Contectar como super USUARIO
 
 
-Instalar nextcloud 
+
+---Instalar nextcloud 
 
 sudo apt install apache2
 
@@ -25,5 +26,32 @@ buscar
 sudo find / -name config.php
 
 sudo nano /var/snap/nextcloud/39212/nextcloud/config/config.php
+
+---Cambiar puerto ssh
+sudo nano /etc/ssh/sshd_config
+Port 3625
+sudo nano /etc/systemd/system/sockets.target.wants/ssh.socket
+ListenStream=3625
+sudo systemctl restart ssh
+sudo systemctl restart ssh.socket
+
+--Comando para saber los que se conectan por ssh
+/var/log/auth.log
+
+ver los intentos fallidos de contraseña
+grep "Failed password" /var/log/auth.log
+
+--Buscar repositorio de ubuntu
+
+sudo nano /etc/apt/sources.list
+
+ver el history guaraado
+
+sudo nano ~/.bash_history
+
+
+
+
+
 
 
