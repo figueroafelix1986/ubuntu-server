@@ -1,0 +1,20 @@
+sudo apt-get update
+sudo apt-get install nginx
+
+server {
+    listen 80;
+    server_name example.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+En este ejemplo, el proxy inverso está configurado para escuchar en el puerto 80 y redirigir todas las solicitudes a http://localhost:3000. También se establecen las cabeceras Host y X-Real-IP para la solicitud.
+
+Crea un enlace simbólico del archivo de configuración que acabas de crear en la carpeta /etc/nginx/sites-enabled/ mediante el siguiente comando:
+sudo ln -s /etc/nginx/sites-available/proxy.conf /etc/nginx/sites-enabled/
+
+sudo service nginx restart
