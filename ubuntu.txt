@@ -78,6 +78,10 @@ vewrsion:2
 sudo netplan apply
 
 
+--Compartir carpetas de windows a linux
+
+Samba
+
 
 
 
