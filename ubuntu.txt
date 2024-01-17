@@ -40,7 +40,7 @@ sudo systemctl restart ssh.socket
 
 ver los intentos fallidos de contraseña
 grep "Failed password" /var/log/auth.log
-
+*--------------------------------------------------------------------
 --Buscar repositorio de ubuntu
 
 sudo nano /etc/apt/sources.list
@@ -82,7 +82,16 @@ sudo netplan apply
 
 Samba
 
+*-------------------------------------------------------------------------
 
+modificar usuario o crear usuario
+
+useradd -c "felix" -g 10 -d /home/usuario001 -m -s /bin/bash usuario001
+passwd usuario001
+-------------------------------------------------------------------
+ver las particiones 
+
+df -h
 
 
 
