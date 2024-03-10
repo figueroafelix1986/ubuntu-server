@@ -2,6 +2,7 @@ https://github.com/figueroafelix1986/ubuntu-server.git
 
 --Actualizar SO ubuntu
 -sudo apt-get update
+sudo apt upgrade
 Gestio de escritorio en modo grafico (opcional)
 -sudo apt install slin
 Desktop
@@ -22,6 +23,7 @@ sudo systemctl enable apache2
 
 sudo systemctl restart apache2
 
+nexcloud_casa.com
 buscar 
 sudo find / -name config.php
 
@@ -35,8 +37,12 @@ ListenStream=3625
 sudo systemctl restart ssh
 sudo systemctl restart ssh.socket
 
+conectarme
+ssh -p 2584 usuario@servidor
+
+
 --Comando para saber los que se conectan por ssh
-/var/log/auth.log
+sudo nano /var/log/auth.log
 
 ver los intentos fallidos de contraseña
 grep "Failed password" /var/log/auth.log
@@ -92,6 +98,16 @@ passwd usuario001
 ver las particiones 
 
 df -h
+---------------------------------------------------------------------
+trabajar con puertos
+
+sudo ufw status
+
+sudo ufw allow puerto
+
+sudo ufw delete allow puerto
+
+
 
 
 
